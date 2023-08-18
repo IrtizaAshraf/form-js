@@ -10,7 +10,7 @@
 //       console.log("Hello " + names + name2 + emails)
 //       h3.innerHTML = "Hello " + names + name2
 
-      
+
 //Question num 1
 // }
 
@@ -67,40 +67,81 @@
 // }
 
 
-const nom1 =  document.querySelector("#number1");
-const operat =  document.querySelector("#operators");
-const nom2 =   document.querySelector("#number2");
+
+// const nom1 = Number( document.querySelector("#number1").value);
+// const operat = document.querySelector("#operators");
+// const nom2 =  Number( document.querySelector("#number2").value);
+// const submiit = document.querySelector("#submit");
+// const head1 = document.querySelector("#result");
+
+// // const nom1 =  document.querySelector("#number1");
+// // const operat =  document.querySelector("#operators");
+// // const nom2 =   document.querySelector("#number2");
+// // const submiit = document.querySelector("#submit");
+// // const head1 = document.querySelector("#result");
+
+
+
+// function calculated() {
+//       switch (operat.value) {
+//             case ("+"):
+//                   let  sum = nom1 + nom2
+//                   head1.innerHTML = "Answer this-----" + sum;
+//                   break;
+
+//             case ("-"):
+//                   const  sub = nom1 + nom2
+//                   head1.innerHTML = "Answer this-----" + sub;
+//                   break;
+//             case ("/"):
+//                   const  div = nom1 + nom2
+//                   head1.innerHTML = "Answer this-----" + din;
+//                   break;
+//             case ("*"):
+//                   const  multi = nom1 + nom2
+//                   head1.innerHTML = "Answer this-----" + multi;
+//                   break;
+
+//             default:
+//                   console.log ("undefine operator")
+//                   break;
+//       }
+// }
+
+
+
+
 const submiit = document.querySelector("#submit");
 const head1 = document.querySelector("#result");
 
 
 
 function calculated() {
-      switch (operat.value) {
+      const nom1 = Number(document.querySelector("#number1").value);
+      const operat = document.querySelector("#operators").value;
+      const nom2 = Number(document.querySelector("#number2").value);
+      let calculatedValue;
+      switch (operat) {
             case ("+"):
-                  const  sum = nom1.value + nom2.value
-                  head1.innerHTML = "Answer this-----" + sum;
+                  calculatedValue = nom1 + nom2;
                   break;
 
             case ("-"):
-                  const  sub = nom1.value + nom2.value
-                  head1.innerHTML = "Answer this-----" + sub;
+                  calculatedValue = nom1 - nom2;
                   break;
             case ("/"):
-                  const  div = nom1.value + nom2.value
-                  head1.innerHTML = "Answer this-----" + din;
+                  calculatedValue = nom1 / nom2;
                   break;
             case ("*"):
-                  const  multi = nom1.value + nom2.value
-                  head1.innerHTML = "Answer this-----" + multi;
+                  calculatedValue = nom1 * nom2;
                   break;
-      
+
             default:
-                  console.log ("undefine operator")
+                  console.log("undefine operator")
                   break;
       }
+      head1.innerHTML = "Result  " + calculatedValue
 }
-
 
 // console.log(num1 +  operator + num2 + result )
 // head.innerHTML ="Results" + result.value
@@ -165,7 +206,7 @@ function calculated() {
 
 // function user() {
 //       console.log ("hello " + names )
-      
+
 // }
 
 
@@ -176,3 +217,81 @@ function calculated() {
 // //     console.log(name2.value);
 // // //     console.log(login);
 // }
+
+
+
+// const singin = document.querySelector("#sendto")
+// const head2 = document.querySelector("#heading")
+
+// function winter() {
+//       const month = document.querySelector("#season");
+//       const singin = document.querySelector("#sendto");
+//       const head2 = document.querySelector("#heading");
+//       // let saesons;
+//       switch (month) {
+//             case 'December':
+//                   season = 'Winter';
+//                   console.log(month)
+//             break;
+//             case 'January':
+//                   season = 'Winter';
+//                   console.log(month)
+//             break;
+//             case 'February':
+//                   season = 'Winter';
+//                console.log( month)
+//             break;
+//             case 'june':
+//             case 'July':
+//             case 'Agust':
+//                   season = 'summer';
+
+//             break;
+
+
+//             default:
+//                  console.log("spring") 
+//                   break;
+//       }
+//       // head2.innerHTML = "Result  " + saesons
+// }
+
+
+
+
+function determineSeason() {
+      const month = document.querySelector("#season").value.toLowerCase();
+      const seasonDisplay = document.querySelector("#heading");
+      
+      let season;
+  
+      switch (month) {
+          case 'december':
+          case 'january':
+          case 'february':
+              season = 'Winter';
+              break;
+          case 'june':
+          case 'july':
+          case 'august':
+              season = 'Summer';
+              break;
+          default:
+              season = 'Spring';
+              break;
+      }
+  
+      seasonDisplay.innerHTML = "Result: " + season;
+      const names = "Muhammad ABDULLAH";
+      // console.log(season.toLowerCase());
+
+  }
+  
+
+
+
+
+
+
+
+
